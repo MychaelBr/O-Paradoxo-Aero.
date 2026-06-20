@@ -1,1 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
 
+/* Paleta de Cores Frutiger Aero (Variáveis) */
+:root {
+    --bg-gradient: linear-gradient(135deg, #00bfff 0%, #a7ff83 50%, #00f2fe 100%);
+    --btn-green: linear-gradient(180deg, #32cd32 0%, #17b917 50%, #0b930b 100%);
+    --btn-blue: linear-gradient(180deg, #00bfff 0%, #0099e6 50%, #007acc 100%);
+    --glass-bg: rgba(255, 255, 255, 0.45);
+    --glass-border: rgba(255, 255, 255, 0.7);
+    --text-color: #0b2f1d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Nunito', sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+main {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Telas do Jogo */
+.passo {
+    display: none;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 120, 215, 0.2);
+    text-align: center;
+}
+
+.passo.ativo {
+    display: block;
+}
+
+p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Botões Bolha */
+.btn-proximo {
+    display: block;
+    width: 100%;
+    background: var(--btn-green);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 14px 20px;
+    margin: 12px 0;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15), inset 0 2px 4px rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+}
+
+.btn-proximo:hover {
+    transform: translateY(-2px);
+    background: var(--btn-blue);
+    box-shadow: 0 6px 20px rgba(0, 191, 255, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.6);
+}
