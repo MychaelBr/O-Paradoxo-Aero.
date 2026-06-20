@@ -1,1 +1,1 @@
-# O-Paradoxo-Aero.
+# O-Paradoxo-Aero
