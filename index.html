@@ -7,21 +7,114 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <main>
         <div class="passo ativo" id="passo-0">
+            <img src="dois-portais.png" alt="Cenário do Gramado Verde Flutuante">
             <p>
                 Você acorda em um gramado verde flutuante e percebe dois portais para dimensões totalmente diferentes. O primeiro portal leva para uma cidade cinza que aparenta ser o mundo real atual, cheio de prédios, fumaça e carros. O segundo portal mostra uma cidade totalmente futurista, colorida, tecnológica e sustentável.
             </p>
-            <button class="btn-proximo" data-proximo="1">Entrar no Portal 1</button>
-            <button class="btn-proximo" data-proximo="2">Entrar no Portal 2</button>
+            <button class="btn-proximo" data-proximo="1">Entrar no Portal 1 (Mundo Atual)</button>
+            <button class="btn-proximo" data-proximo="2">Entrar no Portal 2 (Mundo Futurista)</button>
         </div>
 
         <div class="passo" id="passo-1">
+            <img src="quarto-poluido.png" alt="Quarto com fumaça entrando pela janela">
             <p>
-                Você acorda em seu apartamento com o alarme tocando. Ao pegar seu telefone, depara-se com várias ligações perdidas de seu chefe. A fumaça da rua entra pela janela.
+                Você acorda de sobressalto em seu apartamento com o alarme tocando. Ao pegar seu telefone, depara-se com várias ligações perdidas de seu chefe. A fumaça cinza da rua entra pela janela.
             </p>
             <button class="btn-proximo" data-proximo="3">Atender a ligação</button>
             <button class="btn-proximo" data-proximo="4">Recusar a ligação</button>
+        </div>
+
+        <div class="passo" id="passo-3">
+            <img src="chefe-bravo.png" alt="Telefone tocando com a foto do chefe">
+            <p>
+                Seu chefe grita do outro lado da linha: "Você está atrasado para a apresentação do projeto Aero! Se não chegar em 15 minutos, está demitido!". O trânsito lá fora está completamente travado.
+            </p>
+            <button class="btn-proximo" data-proximo="5">Arriscar o metrô lotado</button>
+            <button class="btn-proximo" data-proximo="0">Largar tudo e pular a janela de volta ao portal</button>
+        </div>
+
+        <div class="passo" id="passo-4">
+            <img src="beco-brilhante.png" alt="Beco com um brilho azul e verde fluorescente">
+            <p>
+                Você desliga o telefone na cara do chefe e decide olhar pela janela. No beco escuro lá embaixo, você avista um brilho familiar azul e verde fluorescente com bolhas flutuantes... É o portal!
+            </p>
+            <button class="btn-proximo" data-proximo="0">Descer correndo para o portal</button>
+            <button class="btn-proximo" data-proximo="6">Ficar no apartamento e aceitar seu destino</button>
+        </div>
+
+        <div class="passo" id="passo-5">
+            <img src="metro-lotado.png" alt="Metrô cinza e superlotado">
+            <p>
+                O metrô quebra no meio do caminho. Você fica preso no túnel escuro por duas horas. Quando finalmente sai, recebe uma mensagem dizendo que foi demitido e o projeto Aero foi cancelado. O mundo continua cinza.
+                <br><br><strong>💀 FIM RUIM: Preso na Rotina.</strong>
+            </p>
+            <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
+        </div>
+
+        <div class="passo" id="passo-6">
+            <img src="apartamento-escuro.png" alt="Apartamento escuro e silencioso">
+            <p>
+                Você decide não fazer nada. Senta-se no sofá enquanto o mundo lá fora continua barulhento e poluído. Porém, você nota que o controle remoto da sua TV antiga começou a flutuar e emitir uma luz neon...
+            </p>
+            <button class="btn-proximo" data-proximo="99">Apertar o botão principal do controle</button>
+            <button class="btn-proximo" data-proximo="0">Ignorar e voltar ao início</button>
+        </div>
+
+        <div class="passo" id="passo-2">
+            <img src="Acidade-futurista.png" alt="Cidade tecnológica futurista com água limpa e plantas">
+            <p>
+                Ao atravessar o portal, você flutua suavemente até o chão de uma praça tecnológica. Árvores de vidro e água corrente dividem espaço com plantas reais. Um pequeno robô flutuante em formato de bolha se aproxima: "Bem-vindo à Neo-Aero. O que deseja investigar?"
+            </p>
+            <button class="btn-proximo" data-proximo="7">Investigar o laboratório de energia limpa</button>
+            <button class="btn-proximo" data-proximo="8">Explorar as praias biosféricas</button>
+        </div>
+
+        <div class="passo" id="passo-7">
+            <img src="laboratorio-neon.png" alt="Laboratório futurista com tubos de ensaio brilhantes">
+            <p>
+                No laboratório, os cientistas explicam que a energia deles vem do oxigênio puro. Eles te dão uma semente biotecnológica capaz de limpar a atmosfera de qualquer planeta instantaneamente.
+            </p>
+            <button class="btn-proximo" data-proximo="9">Levar a semente para o Portal 1 (Mundo Poluído)</button>
+            <button class="btn-proximo" data-proximo="10">Ficar na cidade futurista para sempre</button>
+        </div>
+
+        <div class="passo" id="passo-8">
+            <img src="praia-futurista.png" alt="Praia paradisíaca futurista com água cristalina e golfinhos robôs">
+            <p>
+                A praia é linda, a água é perfeitamente cristalina e o clima é controlado por satélites. É tão relaxante que você perde a noção do tempo e decide viver ali como um turista eterno, esquecendo suas origens.
+                <br><br><strong>🌊 FIM PACÍFICO: O Turista Interdimensional.</strong>
+            </p>
+            <button class="btn-proximo" data-proximo="0">Jogar Novamente</button>
+        </div>
+
+        <div class="passo" id="passo-9">
+            <img src="mundo-salvo.png" alt="Cidade antiga agora limpa, com céu azul e plantas nos prédios">
+            <p>
+                Você cruza o portal de volta e planta a semente no centro da cidade cinza. Em poucos segundos, as chaminés param de expelir fumaça, o céu ganha um tom azul brilhante e plantas começam a cobrir os prédios. Você salvou o seu world real usando a tecnologia do amanhã!
+                <br><br><strong>✨ FIM BOM: O Herói Ecológico.</strong>
+            </p>
+            <button class="btn-proximo" data-proximo="0">Recomeçar Jornada</button>
+        </div>
+
+        <div class="passo" id="passo-10">
+            <img src="apartamento-futurista.png" alt="Quarto futurista luxuoso">
+            <p>
+                Você decide não se arriscar e aceita a cidadania na Neo-Aero. Você ganha um apartamento flutuante e uma vida sem preocupações, mas no fundo, sempre se perguntará o que teria acontecido com as pessoas que você deixou para trás na Terra poluída.
+                <br><br><strong>🏙️ FIM NEUTRO: Uma Nova Vida Exilada.</strong>
+            </p>
+            <button class="btn-proximo" data-proximo="0">Jogar Novamente</button>
+        </div>
+
+        <div class="passo" id="passo-99">
+            <img src="paradoxo-secreto.png" alt="Os dois mundos se fundindo em uma espiral de dados e água">
+            <p>
+                Ao acessar o botão do controle remoto, a realidade racha! O apartamento cinza e a praça futurista começam a se fundir no mesmo espaço. Os dois portais colapsam, criando uma utopia onde o passado e o futuro coexistem em perfeito equilíbrio. Você quebrou o Paradoxo Aero e se tornou o arquiteto de uma nova linha do tempo!
+                <br><br><strong>🔮 FIM SECRETO: O Arquiteto da Realidade.</strong>
+            </p>
+            <button class="btn-proximo" data-proximo="0">Resetar o Universo (Jogar de Novo)</button>
         </div>
     </main>
 
