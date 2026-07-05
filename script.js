@@ -1,51 +1,25 @@
-body {
-    background-color: #00bfff;
-    color: #0b2f1d;
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 20px 0;
-}
+// Seleciona todos os botões de avanço
+const avanca = document.querySelectorAll('.btn-proximo');
 
-main {
-    text-align: center;
-    max-width: 90%;
-    margin: 0 auto; /* Mantém todo o conteúdo centralizado na tela */
-}
+// Passa por cada um dos botões
+avanca.forEach(button => {
+    // Adiciona o ouvinte de clique
+    button.addEventListener('click', function(){
+        // Encontra quem é a div que está ativa no momento
+        const atual = document.querySelector('.ativo');
+        
+        // Monta o nome do ID do próximo passo juntando o texto com o atributo do botão
+        const proximoPasso = 'passo-' + this.getAttribute('data-proximo');
 
-/* Esconde todos os passos por padrão */
-.passo {
-    display: none;
-}
-
-/* Mostra apenas o passo que tiver a classe ativo */
-.passo.ativo {
-    display: block;
-}
-
-/* Limita o tamanho das imagens para não quebrarem o layout */
-img {
-    max-width: 90%;
-    height: auto;
-    border-radius: 8px; /* Opcional: deixa as bordas das imagens levemente arredondadas */
-}
-
-/* Estilização simples para os botões */
-.btn-proximo {
-    display: block;
-    width: 100%;
-    max-width: 400px; /* Evita que o botão fique gigante em telas de computador */
-    background-color: #32cd32;
-    color: white;
-    padding: 14px;
-    margin: 12px auto; /* Centraliza os botões */
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.btn-proximo:hover {
-    background-color: #228b22; /* Efeito visual ao passar o mouse */
-}
+        // Remove a classe ativo da tela atual para escondê-la
+        if (atual) {
+            atual.classList.remove('ativo');
+        }
+        
+        // Busca a nova div pelo ID gerado e adiciona a classe ativo para mostrá-la
+        const proximaDiv = document.getElementById(proximoPasso);
+        if (proximaDiv) {
+            proximaDiv.classList.add('ativo');
+        }
+    });
+});
