@@ -1,81 +1,203 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
 
-/* Paleta de Cores Frutiger Aero (Variáveis) */
+/* ===========================
+   PALETA FRUTIGER AERO
+=========================== */
+
 :root {
     --bg-gradient: linear-gradient(135deg, #00bfff 0%, #a7ff83 50%, #00f2fe 100%);
     --btn-green: linear-gradient(180deg, #32cd32 0%, #17b917 50%, #0b930b 100%);
     --btn-blue: linear-gradient(180deg, #00bfff 0%, #0099e6 50%, #007acc 100%);
-    --glass-bg: rgba(255, 255, 255, 0.45);
-    --glass-border: rgba(255, 255, 255, 0.7);
-    --text-color: #0b2f1d;
+    --glass-bg: rgba(255,255,255,0.45);
+    --glass-border: rgba(255,255,255,0.7);
+    --text-color: #08351d;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: 'Segoe UI', 'Nunito', sans-serif;
-    background: var(--bg-gradient);
-    background-attachment: fixed;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--text-color);
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
 }
 
-main {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
+body{
+    font-family:'Nunito',sans-serif;
+    background:var(--bg-gradient);
+    background-attachment:fixed;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    padding:40px 15px;
+
+    color:var(--text-color);
 }
 
-/* Telas do Jogo */
-.passo {
-    display: none;
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 2px solid var(--glass-border);
-    border-radius: 24px;
-    padding: 30px;
-    box-shadow: 0 8px 32px 0 rgba(0, 120, 215, 0.2);
-    text-align: center;
+main{
+    width:100%;
+    max-width:700px;
 }
 
-.passo.ativo {
-    display: block;
+/* ===========================
+   CARD
+=========================== */
+
+.passo{
+    display:none;
+
+    width:100%;
+
+    background:var(--glass-bg);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    border:2px solid var(--glass-border);
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.15),
+    inset 0 1px 0 rgba(255,255,255,.5);
+
+    animation:fade .4s ease;
 }
 
-p {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    font-weight: 600;
+.passo.ativo{
+    display:block;
 }
 
-/* Botões Bolha */
-.btn-proximo {
-    display: block;
-    width: 100%;
-    background: var(--btn-green);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 14px 20px;
-    margin: 12px 0;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 800;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15), inset 0 2px 4px rgba(255, 255, 255, 0.6);
-    transition: all 0.3s ease;
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-.btn-proximo:hover {
-    transform: translateY(-2px);
-    background: var(--btn-blue);
-    box-shadow: 0 6px 20px rgba(0, 191, 255, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.6);
+/* ===========================
+   IMAGEM
+=========================== */
+
+.passo img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    display:block;
+}
+
+/* ===========================
+   TEXTO
+=========================== */
+
+.passo p{
+    padding:25px;
+
+    font-size:1.08rem;
+    line-height:1.7;
+
+    text-align:center;
+    font-weight:600;
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+
+.btn-proximo{
+
+    width:calc(100% - 50px);
+
+    margin:0 auto 18px;
+
+    display:block;
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:15px;
+
+    background:var(--btn-green);
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+    inset 0 2px 3px rgba(255,255,255,.5),
+    0 5px 15px rgba(0,0,0,.2);
+}
+
+.btn-proximo:hover{
+
+    background:var(--btn-blue);
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 20px rgba(0,191,255,.35),
+    inset 0 2px 3px rgba(255,255,255,.6);
+}
+
+.btn-proximo:active{
+    transform:scale(.98);
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media (max-width:768px){
+
+    body{
+        padding:20px 10px;
+    }
+
+    .passo img{
+        height:230px;
+    }
+
+    .passo p{
+        font-size:1rem;
+        padding:20px;
+    }
+
+    .btn-proximo{
+        width:calc(100% - 30px);
+    }
+
+}
+
+@media (max-width:480px){
+
+    .passo img{
+        height:180px;
+    }
+
+    .passo p{
+        font-size:.95rem;
+    }
+
+    .btn-proximo{
+        font-size:.95rem;
+        padding:14px;
+    }
+
 }
